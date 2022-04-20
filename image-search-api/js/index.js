@@ -73,6 +73,53 @@ function loadFromLocalStorage() {
 	}
 }
 
+// popup change
+function popupImage(elem) {
+	const target = elem.target
+	if (target.className == 'img') {
+		tooglePopup(target)
+	}
+}
+
+function tooglePopup(target) {
+	const url = target.dataset.url
+
+	let popupBg = document.querySelector('.popupSC__bg')
+	let popup = document.querySelector('.popupSC')
+	let openPopupButtons = document.querySelectorAll('.open-popupSC')
+	let closePopupButton = document.querySelector('.close-popupSC')
+	let bodyPopupSC = document.querySelector('.body-popupSC')
+
+	popupBg.classList.add('active')
+	popup.classList.add('active')
+
+	if (url) {
+		bodyPopupSC.innerHTML = ''
+		const blockPopup = document.createElement('div')
+		const imgPopup = document.createElement('img')
+		imgPopup.src = url
+		imgPopup.classList.add('imgPopup')
+		blockPopup.append(imgPopup)
+		bodyPopupSC.append(blockPopup)
+	}
+
+	if (closePopupButton) {
+		closePopupButton.addEventListener('click', () => {
+			popupBg.classList.remove('active')
+			popup.classList.remove('active')
+		})
+	}
+
+	document.addEventListener('click', e => {
+		if (e.target === popupBg) {
+			popupBg.classList.remove('active')
+			popup.classList.remove('active')
+		}
+	})
+}
+
+document.addEventListener('click', popupImage.bind(this))
+
 window.addEventListener('DOMContentLoaded', function (e) {
 	loadFromLocalStorage()
 
