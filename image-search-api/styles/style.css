@@ -134,7 +134,7 @@ vertical-align: middle;
   gap:25px;
   margin-top: 15px;
 }
-.img {
+.img__api {
   width: 380px;
   height: 214px;
   background-position: center;
@@ -150,8 +150,9 @@ vertical-align: middle;
   transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
+  background: url(../assets/gif/preloader.gif) center / 50px no-repeat;
 }
-.img:hover {
+.img__api:hover {
   transform: scale(1.1,1.1);
   -webkit-transform: scale(1.1,1.1);
   -moz-transform: scale(1.1,1.1);
@@ -161,6 +162,10 @@ vertical-align: middle;
   transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
+}
+.loading-img {
+  width: 100%;
+  height: inherit;
 }
 .footer > .container {
   display: -ms-flexbox;
@@ -204,7 +209,7 @@ vertical-align: middle;
 .footer__item:nth-child(1) a {
   padding: 5px;
 }
-.open-popupSC {
+.open-popup {
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
@@ -214,7 +219,7 @@ vertical-align: middle;
   color: #171714;
 }
 
-.popupSC__bg {
+.popup__bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -227,13 +232,13 @@ vertical-align: middle;
   z-index: 3550;
 }
 
-.popupSC__bg.active {
+.popup__bg.active {
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;
 }
 
-.popupSC {
+.popup {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -251,34 +256,34 @@ vertical-align: middle;
   width: 95%;
 }
 
-.popupSC::-webkit-scrollbar {
+.popup::-webkit-scrollbar {
   width: 5px;
 }
 
-.popupSC::-webkit-scrollbar-track {
+.popup::-webkit-scrollbar-track {
   -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
   background-color: #f9f9fd;
   border-radius: 5px;
 }
 
-.popupSC::-webkit-scrollbar-thumb {
+.popup::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: linear-gradient(180deg, #e7e7e7, #000);
 }
 
-.popupSC.active {
+.popup.active {
   transform: translate(-50%, -50%) scale(1);
   transition: 0.5s all;
 }
 
-.close-popupSC {
+.close-popup {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
 
-.close-popupSC span {
+.close-popup span {
   width: 20px;
   height: 20px;
   background-image: url(../assets/svg/clearPopup.svg);
@@ -287,7 +292,7 @@ vertical-align: middle;
   display: inline-block;
 }
 
-.close-popupSC span:hover {
+.close-popup span:hover {
   background-image: url(../assets/svg/clearPopup_hover.svg);
 }
 
