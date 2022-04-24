@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="./assets/favicon.ico" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>Image Search API</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<div class="container">
+					<div class="header">
+						<h2 class="header__title">
+							<span>
+								<img class="logo" src="./assets/svg/logo.svg" alt=""
+							/></span>
+							<span>Search </span><span class="text-accent">Images</span>
+						</h2>
+						<div id="search_box">
+							<input id="input" type="text" placeholder="Search..." />
+							<span class="clear__button transition" id="clear"></span>
+							<span class="search__button transition" id="search"></span>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div>
+				<div class="container">
+					<div id="grid"></div>
+					<div class="popup__bg">
+						<div class="popup">
+							<div class="close-popup">
+								<span class="transition"></span>
+							</div>
+							<div class="body-popup"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__item">
+					<span>©</span>
+					<span>2022</span>
+					<a class="btn-transition" href="https://github.com/Alexsail8"
+						>github</a
+					>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
